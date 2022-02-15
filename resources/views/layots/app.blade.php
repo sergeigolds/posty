@@ -20,14 +20,14 @@
                 <a href="{{ route('dashboard') }}" class="p-3">Dashboard</a>
             </li>
             <li>
-                <a href="" class="p-3">Post</a>
+                <a href="{{ route('posts') }}" class="p-3">Post</a>
             </li>
         </ul>
 
         <ul class="flex items-center">
             @auth
                 <li>
-                    <a href="" class="p-3">Sergei Golds</a>
+                    <a href="" class="p-3">{{ auth()->user()->name }}</a>
                 </li>
                 <li>
                     <form action="{{ route('logout') }}" method="post" class="p-3 inline">
